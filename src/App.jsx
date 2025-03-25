@@ -7,7 +7,7 @@ import ComponenteFuncional from "./components/ComponenteFuncional.jsx";
 import Propiedades from "./components/Propiedades.jsx";
 import Estado from "./components/Estado.jsx";
 import RenderizadoCondicional from "./components/RenderizadoCondicional.jsx";
-
+import RenderizadoElementos from "./components/RenderizadoElementos.jsx";
 
 function App() {
   let nombre = "Elliot";
@@ -66,6 +66,7 @@ function App() {
         />
         <Estado />
         <RenderizadoCondicional />
+        <RenderizadoElementos />
       </section>
       <br />
       <br />
