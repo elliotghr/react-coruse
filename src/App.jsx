@@ -5,6 +5,7 @@ import "./App.css";
 import Componente from "./components/ComponenteDeClase.jsx";
 import ComponenteFuncional from "./components/ComponenteFuncional.jsx";
 import Propiedades from "./components/Propiedades.jsx";
+import Estado from "./components/Estado.jsx";
 
 function App() {
   let nombre = "Elliot";
@@ -57,8 +58,11 @@ function App() {
           objeto={{ nombre: "Elliot", edad: 28 }}
           funcion={(num) => num * num}
           elementoReact={<i>Esto es un elemento React</i>}
-          componenteReact={<Componente msg="Soy un componente pasado como prop" />}
+          componenteReact={
+            <Componente msg="Soy un componente pasado como prop" />
+          }
         />
+        <Estado />
       </section>
       <br />
       <br />

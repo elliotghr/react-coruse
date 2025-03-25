@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export default function Propiedades(props) {
   return (
     <div>
-      <h2>Propiedades</h2>
+      <h2>Properties</h2>
       <p>{props.nombre}</p>
       <ul>
         {/* Ejemplos de tipo de datos que se pueden recibir como props */}
