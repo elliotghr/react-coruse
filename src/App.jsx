@@ -6,6 +6,8 @@ import Componente from "./components/ComponenteDeClase.jsx";
 import ComponenteFuncional from "./components/ComponenteFuncional.jsx";
 import Propiedades from "./components/Propiedades.jsx";
 import Estado from "./components/Estado.jsx";
+import RenderizadoCondicional from "./components/RenderizadoCondicional.jsx";
+
 
 function App() {
   let nombre = "Elliot";
@@ -63,6 +65,7 @@ function App() {
           }
         />
         <Estado />
+        <RenderizadoCondicional />
       </section>
       <br />
       <br />

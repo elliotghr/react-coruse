@@ -21,6 +21,7 @@ class Estado extends React.Component {
   render() {
     return (
       <div>
+        <h2>State</h2>
         <p>count is {this.state.count}</p>
         <EstadoAHijo contadorHijo={this.state.count} />
       </div>
