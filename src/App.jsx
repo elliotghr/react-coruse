@@ -1,6 +1,10 @@
+// Desde la versión 17 de React, ya no es necesario importar React en los componentes
 import { useState } from "react";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import Componente from "./components/ComponenteDeClase.jsx";
+import ComponenteFuncional from "./components/ComponenteFuncional.jsx";
+import Propiedades from "./components/Propiedades.jsx";
 
 function App() {
   let nombre = "Elliot";
@@ -41,6 +45,41 @@ function App() {
           <li key={index}>{estacion}</li>
         ))}
       </ul>
+      <section>
+        <Componente msg="Hola soy un componente basado en clases desde una prop" />
+        <ComponenteFuncional msg="Hola soy un componente funcional desde una prop" />
+        <hr />
+        <Propiedades
+          cadena="Esto es una cadena de texto"
+          numero={19}
+          booleano={true}
+          arreglo={[1, 2, 3]}
+          objeto={{ nombre: "Elliot", edad: 28 }}
+          funcion={(num) => num * num}
+          elementoReact={<i>Esto es un elemento React</i>}
+          componenteReact={<Componente msg="Soy un componente pasado como prop" />}
+        />
+      </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
