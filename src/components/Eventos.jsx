@@ -75,3 +75,53 @@ export class EventosES7 extends Component {
     );
   }
 }
+
+// function Boton(props) {
+//   return <button onClick={props.myOnClick}>Botón hecho Componente</button>;
+// }
+
+// Usando arrow functions y desestructuración
+const Boton = ({ myOnClick }) => (
+  <button onClick={myOnClick}>Botón hecho Componente</button>
+);
+
+export class MasSobreEventos extends Component {
+  handleClick = (e, message) => {
+    // Evento sintetico
+    console.log(e);
+    console.log(e.target);
+    // Evento nativo
+    console.log(e.nativeEvent);
+    console.log(e.nativeEvent.target);
+    // Paso de parámetros
+    console.log(message);
+  };
+
+  render() {
+    return (
+      <div>
+        <h2>More about Events</h2>
+        <button
+          onClick={(e) =>
+            this.handleClick(e, "Hola pasando parametro desde un evento")
+          }
+        >
+          Saludar
+        </button>
+        {/* Evento Personalizado */}
+        {/* Se utiliza porque los enentos como onClick son propios de elementos JSX, pero no de componentes */}
+        {/* <Boton
+          onClick={(e) =>
+            this.handleClick(e, "Hola pasando parametro desde un evento")
+          }
+        /> */}
+        {/* La solución es pasarlo como una propiedad y ejecutarlo en el evento del componente */}
+        <Boton
+          myOnClick={(e) =>
+            this.handleClick(e, "Hola pasando parametro desde un evento")
+          }
+        />
+      </div>
+    );
+  }
+}

@@ -8,7 +8,7 @@ import Propiedades from "./components/Propiedades.jsx";
 import Estado from "./components/Estado.jsx";
 import RenderizadoCondicional from "./components/RenderizadoCondicional.jsx";
 import RenderizadoElementos from "./components/RenderizadoElementos.jsx";
-import { EventosES6, EventosES7 } from "./components/Eventos.jsx";
+import { EventosES6, EventosES7, MasSobreEventos } from "./components/Eventos.jsx";
 
 function App() {
   let nombre = "Elliot";
@@ -25,7 +25,7 @@ function App() {
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Vite</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -75,6 +75,8 @@ function App() {
         <EventosES6 />
         <hr />
         <EventosES7 />
+        <hr />
+        <MasSobreEventos />
       </section>
       <br />
       <br />
