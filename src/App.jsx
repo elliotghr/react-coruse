@@ -8,6 +8,7 @@ import Propiedades from "./components/Propiedades.jsx";
 import Estado from "./components/Estado.jsx";
 import RenderizadoCondicional from "./components/RenderizadoCondicional.jsx";
 import RenderizadoElementos from "./components/RenderizadoElementos.jsx";
+import Eventos from "./components/Eventos.jsx";
 
 function App() {
   let nombre = "Elliot";
@@ -64,9 +65,14 @@ function App() {
             <Componente msg="Soy un componente pasado como prop" />
           }
         />
+        <hr />
         <Estado />
+        <hr />
         <RenderizadoCondicional />
+        <hr />
         <RenderizadoElementos />
+        <hr />
+        <Eventos />
       </section>
       <br />
       <br />
