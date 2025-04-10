@@ -8,8 +8,13 @@ import Propiedades from "./components/Propiedades.jsx";
 import Estado from "./components/Estado.jsx";
 import RenderizadoCondicional from "./components/RenderizadoCondicional.jsx";
 import RenderizadoElementos from "./components/RenderizadoElementos.jsx";
-import { EventosES6, EventosES7, MasSobreEventos } from "./components/Eventos.jsx";
+import {
+  EventosES6,
+  EventosES7,
+  MasSobreEventos,
+} from "./components/Eventos.jsx";
 import Padre from "./components/ComunicacionComponentes.jsx";
+import CicloVida from "./components/CicloVida.jsx";
 
 function App() {
   let nombre = "Elliot";
@@ -80,6 +85,8 @@ function App() {
         <MasSobreEventos />
         <hr />
         <Padre />
+        <hr />
+        <CicloVida />
       </section>
       <br />
       <br />
