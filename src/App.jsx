@@ -15,6 +15,7 @@ import {
 } from "./components/Eventos.jsx";
 import Padre from "./components/ComunicacionComponentes.jsx";
 import CicloVida from "./components/CicloVida.jsx";
+import AjaxApis from "./components/AjaxApis.jsx";
 
 function App() {
   let nombre = "Elliot";
@@ -87,6 +88,8 @@ function App() {
         <Padre />
         <hr />
         <CicloVida />
+        <hr />
+        <AjaxApis />
       </section>
       <br />
       <br />
