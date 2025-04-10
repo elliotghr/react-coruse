@@ -16,6 +16,7 @@ import {
 import Padre from "./components/ComunicacionComponentes.jsx";
 import CicloVida from "./components/CicloVida.jsx";
 import AjaxApis from "./components/AjaxApis.jsx";
+import ContadorHooks from "./components/ContadorHooks.jsx";
 
 function App() {
   let nombre = "Elliot";
@@ -89,7 +90,9 @@ function App() {
         <hr />
         <CicloVida />
         <hr />
-        <AjaxApis />
+        {/* <AjaxApis /> */}
+        <hr />
+        <ContadorHooks title="Followers"/>
       </section>
       <br />
       <br />
