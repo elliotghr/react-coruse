@@ -21,6 +21,7 @@ import ScrollHooks from "./components/ScrollHooks.jsx";
 import RelojHooks from "./components/RelojHooks.jsx";
 import AjaxHooks from "./components/AjaxHooks.jsx";
 import Referencias from "./components/Referencias.jsx";
+import Formularios from "./components/Formularios.jsx";
 
 function App() {
   let nombre = "Elliot";
@@ -105,6 +106,8 @@ function App() {
         <AjaxHooks />
         <hr />
         <Referencias />
+        <hr />
+        <Formularios />
         <hr />
       </section>
       <br />
