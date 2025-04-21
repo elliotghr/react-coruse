@@ -20,6 +20,7 @@ import ContadorHooks from "./components/ContadorHooks.jsx";
 import ScrollHooks from "./components/ScrollHooks.jsx";
 import RelojHooks from "./components/RelojHooks.jsx";
 import AjaxHooks from "./components/AjaxHooks.jsx";
+import Referencias from "./components/Referencias.jsx";
 
 function App() {
   let nombre = "Elliot";
@@ -102,6 +103,9 @@ function App() {
         <RelojHooks />
         <hr />
         <AjaxHooks />
+        <hr />
+        <Referencias />
+        <hr />
       </section>
       <br />
       <br />
