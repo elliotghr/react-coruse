@@ -37,7 +37,7 @@ export default function CrudApp() {
 
   //   Funciones para el crud
   const createData = (data) => {
-    data.id = Date.now();
+    data.id = `"${Date.now()}"`;
     setDb([...db, data]);
   };
 
@@ -61,19 +61,19 @@ export default function CrudApp() {
 
   return (
     <>
-      <h1>React exercises</h1>
+      <h2>CRUD APP</h2>
       <article className="grid-1-2">
-          <CrudForm
-            createData={createData}
-            updateData={updateData}
-            dataToEdit={dataToEdit}
-            setDataToEdit={setDataToEdit}
-          />
-          <CrudTable
-            data={db}
-            deleteData={deleteData}
-            setDataToEdit={setDataToEdit}
-          />
+        <CrudForm
+          createData={createData}
+          updateData={updateData}
+          dataToEdit={dataToEdit}
+          setDataToEdit={setDataToEdit}
+        />
+        <CrudTable
+          data={db}
+          deleteData={deleteData}
+          setDataToEdit={setDataToEdit}
+        />
       </article>
     </>
   );
