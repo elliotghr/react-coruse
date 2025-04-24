@@ -1,9 +1,0 @@
-{
-  "frameworks": [
-    { "id": 1, "name": "React", "web": "https://reactjs.org/" },
-    { "id": 2, "name": "Vue", "web": "https://vuejs.org/" },
-    { "id": 3, "name": "Angular", "web": "https://angular.io/" },
-    { "id": 4, "name": "Svelte", "web": "https://svelte.dev/" },
-    { "id": 5, "name": "Ember", "web": "https://emberjs.com/" }
-  ]
-}
