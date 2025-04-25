@@ -38,7 +38,6 @@ export default function App() {
 
   return (
     <div>
-      <h1>React general tests</h1>
       <article className="grid-1-2">
         <AppForm
           createData={createData}
