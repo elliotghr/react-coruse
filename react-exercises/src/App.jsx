@@ -2,11 +2,14 @@ import { useState } from "react";
 import CrudApp from "./components/CrudApp";
 import CrudApi from "./components/CrudApi";
 import { SongSearch } from "./components/SongSearch";
+import { SelectsAnidados } from "./components/SelectsAnidados";
 
 function App() {
   return (
     <div>
-      <h1>React exercises</h1>
+      {/* <h1>React exercises</h1> */}
+      <hr />
+      <SelectsAnidados />
       <hr />
       <SongSearch />
       <hr />
