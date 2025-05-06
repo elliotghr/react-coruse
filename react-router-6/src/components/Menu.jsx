@@ -8,6 +8,7 @@ export const Menu = () => {
         <Link to="/acerca">Acerca</Link>
         <Link to="/about">About</Link>
         <Link to="/contacto">Contacto</Link>
+        <Link to="/productos">Productos</Link>
       </nav>
       <nav className="menu">
         <NavLink
