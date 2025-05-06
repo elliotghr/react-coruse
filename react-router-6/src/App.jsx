@@ -9,8 +9,9 @@ import { Error404 } from "./pages/Error404";
 import { Productos } from "./pages/Productos";
 import { ProductoDetalle } from "./pages/ProductoDetalle";
 import { useState } from "react";
+import { Servicios } from "./pages/Servicios";
 
-const initialProductos = [
+const initialProducts = [
   { id: 1, nombre: "Producto 1", precio: 100 },
   { id: 2, nombre: "Producto 2", precio: 200 },
   { id: 3, nombre: "Producto 3", precio: 300 },
@@ -19,7 +20,7 @@ const initialProductos = [
 ];
 
 function App() {
-  const [productos, setProductos] = useState(initialProductos);
+  const [productos, setProductos] = useState(initialProducts);
 
   return (
     <div className="App">
@@ -41,6 +42,11 @@ function App() {
             path="/productos/:id"
             element={<ProductoDetalle productos={productos} />}
           ></Route>
+          <Route path="/servicios" element={<Servicios />}>
+            <Route index element={<h2>Este es el home de servicios</h2>} />
+            <Route path="/servicios/garantia" element={<h2>Garantia de nuestros servicios</h2>} />
+            <Route path="/servicios/lista" element={<h2>Lista de nuestros servicios</h2>} />
+          </Route>
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>
