@@ -3,11 +3,14 @@ import CrudApp from "./components/CrudApp";
 import CrudApi from "./components/CrudApi";
 import { SongSearch } from "./components/SongSearch";
 import { SelectsAnidados } from "./components/SelectsAnidados";
+import { ContactForm } from "./components/ContactForm";
 
 function App() {
   return (
     <div>
       {/* <h1>React exercises</h1> */}
+      <hr />
+      <ContactForm />
       <hr />
       <SelectsAnidados />
       <hr />
