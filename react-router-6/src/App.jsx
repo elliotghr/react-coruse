@@ -1,6 +1,12 @@
 import "./App.css";
 import { Header } from "./components/Header";
-import { HashRouter, BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import {
+  HashRouter,
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { Acerca } from "./pages/Acerca";
 import { Home } from "./pages/Home";
 import { Contacto } from "./pages/Contacto";
@@ -15,6 +21,9 @@ import { ServiciosLista } from "./pages/ServiciosLista";
 import { ServiciosPoliticas } from "./pages/ServiciosPoliticas";
 import { ServiciosHome } from "./pages/ServiciosHome";
 import { ServicioDetalle } from "./pages/ServicioDetalle";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import { PrivateRoutes } from "./components/PrivateRoutes";
 
 const initialProducts = [
   { id: 1, nombre: "Producto 1", precio: 100 },
@@ -53,8 +62,6 @@ const initialProducts = [
   { id: 34, nombre: "Producto 34", precio: 3400 },
   { id: 35, nombre: "Producto 35", precio: 3500 },
   { id: 36, nombre: "Producto 36", precio: 3600 },
-  
-
 ];
 
 const initialServices = [
@@ -104,6 +111,11 @@ function App() {
               }
             />
             <Route path="politicas" element={<ServiciosPoliticas />} />
+          </Route>
+          <Route exact path="/login" element={<Login />} />
+          <Route element={<PrivateRoutes/>}>
+              <Route path='/' element={<Home/>} />
+              <Route path='/dashboard' element={<Dashboard/>} />
           </Route>
           <Route path="*" element={<Error404 />} />
         </Routes>
