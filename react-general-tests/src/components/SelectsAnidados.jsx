@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SelectComponent } from "./SelectComponent";
 
-export const Forms = () => {
+export const SelectsAnidados = () => {
   const [state, setState] = useState("");
   const [municipality, setMunicipality] = useState("");
   const [colony, setColony] = useState("");

@@ -1,13 +1,17 @@
 import React from "react";
 import AppIndex from "./components/AppIndex";
 import { SongSearch } from "./components/SongSearch";
-import { Forms } from "./components/SelectsAnidados";
+import { SelectsAnidados } from "./components/SelectsAnidados";
+import { ContactForm } from "./components/ContactForm";
+
 
 function App() {
   return (
     <div>
       <hr />
-      <Forms />
+      <ContactForm />
+      <hr />
+      <SelectsAnidados />
       <hr />
       <SongSearch />
       <hr />
