@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Creamos un estado inicial valido para el formulario
 // y lo inicializamos con un objeto vacio
@@ -14,6 +15,8 @@ export const CrudForm = ({
   dataToEdit,
   setDataToEdit,
 }) => {
+  let navigate = useNavigate();
+
   const [form, setForm] = useState(initialForm);
 
   //   useEffect para detectar cambios en el estado dataToEdit
@@ -52,6 +55,7 @@ export const CrudForm = ({
   const handleReset = (e) => {
     setForm(initialForm);
     setDataToEdit(null);
+    navigate(-1);
   };
 
   return (

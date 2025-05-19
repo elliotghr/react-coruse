@@ -14,7 +14,7 @@ export const CrudTable = ({ data, deleteData, setDataToEdit }) => {
           </tr>
         </thead>
         <tbody>
-          {data.length > 0 ? (
+          {data?.length > 0 ? (
             data.map((el) => {
               return (
                 <CrudTableRow
