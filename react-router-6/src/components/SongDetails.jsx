@@ -4,6 +4,7 @@ import { SongLyric } from "./SongLyric";
 import { Message } from "./Message";
 
 export const SongDetails = ({ search, lyric, bio }) => {
+  console.log(lyric, bio);
   if (!lyric && !bio) return null;
 
   return (

@@ -7,9 +7,9 @@ function App() {
 
   return (
     <div className="App">
-      {/* <SongSearch /> */}
+      <SongSearch />
       <hr />
-      <CrudApi />
+      {/* <CrudApi /> */}
       <hr />
       {/* <ConceptosBasicos /> */}
     </div>

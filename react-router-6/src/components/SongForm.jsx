@@ -5,7 +5,7 @@ const initialForm = {
   song: "",
 };
 
-export const SongForm = ({ handleSearch }) => {
+export const SongForm = ({ handleSearch, handleSaveSong, favsisDisabled, setFavsIsDisabled }) => {
   const [form, setForm] = useState(initialForm);
 
   const handleChange = (e) => {
@@ -22,7 +22,8 @@ export const SongForm = ({ handleSearch }) => {
       return;
     }
     handleSearch(form);
-    setForm(initialForm);
+    // setForm(initialForm);
+    setFavsIsDisabled(false);
   };
 
   return (
@@ -43,6 +44,7 @@ export const SongForm = ({ handleSearch }) => {
           value={form.song}
         />
         <input type="submit" value="Enviar" />
+        <input type="button" disabled={favsisDisabled && "disabled"} onClick={() => handleSaveSong(form)} value="Agregar canción" />
       </form>
     </section>
   );
