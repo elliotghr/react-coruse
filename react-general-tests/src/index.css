@@ -34,20 +34,37 @@ input {
 }
 
 input[type="submit"],
-input[type="reset"] {
+input[type="reset"],
+button {
   display: inline;
   width: 150px;
   cursor: pointer;
   padding: 0.5rem 1rem;
+  margin: 0.1rem 0.3rem;
   border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
   background-color: #007bff;
   color: white;
   border: none;
   font-size: 1rem;
 }
 
+button {
+  background-color: gray;
+  &:hover {
+    background-color: #5a6268;
+  }
+}
+
 input[type="submit"]:hover {
   background-color: #0056b3;
+}
+
+input[type="text"] {
+  background-color: #3b3b3b;
+  border: 1px solid #ced4da;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 article div:first-child {

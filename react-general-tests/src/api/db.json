@@ -1,0 +1,59 @@
+{
+  "santos": [
+    {
+      "id": "1",
+      "name": "Seiya",
+      "constellation": "Pegasus"
+    },
+    {
+      "id": "2",
+      "name": "Shiryu",
+      "constellation": "Dragon"
+    },
+    {
+      "id": "3",
+      "name": "Hyoga",
+      "constellation": "Cygnus"
+    },
+    {
+      "id": "4",
+      "name": "Shun",
+      "constellation": "Andromeda"
+    },
+    {
+      "id": "5",
+      "name": "Ikki",
+      "constellation": "Phoenix"
+    },
+    {
+      "id": "04ec",
+      "name": "Nano",
+      "constellation": "Banano"
+    },
+    {
+      "id": "5ab7",
+      "name": "Cri cri",
+      "constellation": "Chisty"
+    },
+    {
+      "id": "cd56",
+      "name": "Moio",
+      "constellation": "Bon"
+    },
+    {
+      "id": "5ca5",
+      "name": "Woody",
+      "constellation": "Goffy"
+    },
+    {
+      "id": "9de3",
+      "name": "Tifón",
+      "constellation": "Tofi"
+    },
+    {
+      "id": "f4d7",
+      "name": "Peluche",
+      "constellation": "Pelusín"
+    }
+  ]
+}
