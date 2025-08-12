@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import CrudContext from "../context/CrudContext";
 
 // Creamos un estado inicial valido para el formulario
 // y lo inicializamos con un objeto vacio
@@ -8,12 +9,11 @@ const initialForm = {
   constellation: "",
 };
 
-export const CrudForm = ({
-  createData,
-  updateData,
-  dataToEdit,
-  setDataToEdit,
-}) => {
+export const CrudForm = () => {
+  // Usamos el contexto CrudContext para acceder a las funciones
+  const { createData, updateData, dataToEdit, setDataToEdit } =
+    useContext(CrudContext);
+
   const [form, setForm] = useState(initialForm);
 
   //   useEffect para detectar cambios en el estado dataToEdit

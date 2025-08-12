@@ -19,7 +19,6 @@ export const CrudProvider = ({ children }) => {
     helpHttp()
       .get(url)
       .then((res) => {
-        console.log(res.err);
         if (!res.err) {
           setDb(res);
           setError(null);
@@ -96,13 +95,12 @@ export const CrudProvider = ({ children }) => {
       setDataToEdit(null);
     }
   };
-  data = {
+  let data = {
     db,
     setDb,
     dataToEdit,
     setDataToEdit,
     error,
-    setError,
     loading,
     createData,
     updateData,

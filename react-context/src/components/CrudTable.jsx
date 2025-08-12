@@ -1,7 +1,11 @@
-import React from "react";
+import { useContext } from "react";
 import { CrudTableRow } from "./CrudTableRow";
+import CrudContext from "../context/CrudContext";
 
-export const CrudTable = ({ data, deleteData, setDataToEdit }) => {
+export const CrudTable = () => {
+  // Usamos el contexto CrudContext para acceder a las funciones
+  const { db: data } = useContext(CrudContext);
+
   return (
     <div>
       <h3>Tabla de datos</h3>
@@ -16,14 +20,7 @@ export const CrudTable = ({ data, deleteData, setDataToEdit }) => {
         <tbody>
           {data.length > 0 ? (
             data.map((el) => {
-              return (
-                <CrudTableRow
-                  key={el.id}
-                  el={el}
-                  deleteData={deleteData}
-                  setDataToEdit={setDataToEdit}
-                />
-              );
+              return <CrudTableRow key={el.id} el={el} />;
             })
           ) : (
             <tr>
