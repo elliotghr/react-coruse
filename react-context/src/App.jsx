@@ -1,3 +1,4 @@
+import CrudApi from "./components/CrudApi";
 import { MyPage } from "./components/MyPage";
 import { MyPageContext } from "./components/MyPageContext";
 
@@ -12,6 +13,8 @@ function App() {
       >
         Documentación
       </a>
+      <hr />
+      <CrudApi />
       <hr />
       <MyPageContext />
       <MyPage />
