@@ -26,9 +26,13 @@ function reducer(state, action) {
   }
 }
 
+const init = (initialState) => {
+  return { contador: initialState.contador + 100 };
+};
+
 export const Contador = () => {
   //   const [contador, setContador] = useState(0);
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState, init);
   // Funciones para incrementar y decrementar el contador
   //   const Incrementar = () => setContador(contador + 1);
   //   const Decrementar = () => setContador(contador - 1);
