@@ -4,6 +4,8 @@ import {
   shoppingReducer,
 } from "../reducers/shoppingReducer";
 import { ProductItem } from "./ProductItem";
+import { CartItem } from "./CartItem";
+import { TYPES } from "../actions/shoppingActions";
 
 export const ShoppingCart = () => {
   // Initialize the reducer with the initial state
@@ -13,13 +15,18 @@ export const ShoppingCart = () => {
 
   //   Define action dispatch functions
   const addToCart = (id) => {
-    console.log(id);
+    dispatch({ type: TYPES.ADD_TO_CART, payload: id });
   };
-  const removeOneFromCart = () => {};
-  const removeAllFromCart = () => {};
-  const clearCart = () => {};
+  const removeOneFromCart = (id) => {
+    dispatch({ type: TYPES.REMOVE_ONE_FROM_CART, payload: id });
+  };
+  const removeAllFromCart = (id) => {
+    dispatch({ type: TYPES.REMOVE_ALL_FROM_CART, payload: id });
+  };
+  const clearCart = () => {
+    dispatch({ type: TYPES.CLEAR_CART });
+  };
 
-  console.log(products, cart);
   return (
     <div>
       <h2>Carrito de Compras</h2>
@@ -36,7 +43,21 @@ export const ShoppingCart = () => {
         })}
       </article>
       <h3>Carrito</h3>
-      <article className="box"></article>
+      <article className="box">
+        {cart.length === 0 ? (
+          <p>No hay productos en el carrito</p>
+        ) : (
+          cart.map((item, index) => (
+            <CartItem
+              key={index}
+              data={item}
+              removeOneFromCart={removeOneFromCart}
+              removeAllFromCart={removeAllFromCart}
+            />
+          ))
+        )}
+        <button onClick={clearCart}>Limpiar Carrito</button>
+      </article>
     </div>
   );
 };
