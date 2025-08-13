@@ -4,7 +4,7 @@ export const CartItem = ({ data, removeOneFromCart, removeAllFromCart }) => {
   if (!data) return null;
   const { id, name, price, quantity } = data;
   return (
-    <div style={{ border: "1px solid #ccc", padding: "10px" }}>
+    <div className="item">
       <h4>{name}</h4>
       <p>Cantidad: {quantity}</p>
       <p>Precio unitario: ${price}.00</p>

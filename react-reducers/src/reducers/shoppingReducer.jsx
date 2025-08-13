@@ -76,6 +76,16 @@ export function shoppingReducer(state, action) {
     case TYPES.CLEAR_CART:
       return shoppingInitialState;
 
+    case TYPES.SHOW_TOTAL: {
+      let total = 0;
+      // Calculate the total price of items in the cart
+      state.cart.forEach((item) => (total += item.price * item.quantity));
+      //   Update the state with the total
+      return {
+        ...state,
+        total: total,
+      };
+    }
     default: {
       return state;
     }
